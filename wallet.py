@@ -3,13 +3,13 @@
 # A data model where balance is kept
 
 class Wallet:
-   # _balance = 20.0
+    balance = 0.0
+
+    def set_balance(self, bal):
+        self.balance = bal
 
     def get_balance(self):
         return self.balance
-    
-    def set_balance(self, bal):
-        self.balance = bal
 
     
 
