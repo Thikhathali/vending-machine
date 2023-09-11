@@ -34,7 +34,7 @@ class VendingMachine:
     
     def check_funds(self, choice) -> bool:
         self.afford = False
-        if self.lstStockItems[choice - 1].get_price() < self.wallet_bal.get_balance():
+        if self.lstStockItems[choice - 1].get_price() <= self.wallet_bal.get_balance():
             self.afford = True
         return self.afford
     
