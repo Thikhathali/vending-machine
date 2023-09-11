@@ -41,7 +41,10 @@ class VendingMachine:
         if not self.afford:
             print('Insufficient funds!')         
         elif self.productAvailable == True and self.afford == True:
+            new_bal = self.wallet_bal.get_balance - self.lstStockItems[choice - 1].get_price 
+            self.wallet_bal.set_balance(new_bal)
             new_quantity = self.lstStockItems[choice - 1].get_quantity() - 1
             self.lstStockItems[choice - 1].set_quantity(new_quantity)
             print(f'{self.lstStockItems[choice - 1].get_name()} dispensing ...')
             print(f'new quantity: {self.lstStockItems[choice - 1].get_quantity()}')
+            print(f'new balance: {self.wallet_bal.get_balance}')

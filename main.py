@@ -8,6 +8,8 @@ import wallet, vendingMachine
 wallet_bal = wallet.Wallet()
 v_machine = vendingMachine.VendingMachine()
 
+wallet_bal.set_balance(20.0)
+
 print(f'current Bal: R{wallet_bal.get_balance()}\n')
 v_machine.display_products()
 
