@@ -20,6 +20,9 @@ class VendingMachine:
 
     wallet_bal.set_balance(30.0)
 
+    def get_StockItems_size(self) -> int:
+        return len(self.lstStockItems)
+
 
     def display_products(self) -> None:
         for i in range(len(self.lstStockItems)):
